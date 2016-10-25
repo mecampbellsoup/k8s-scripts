@@ -69,3 +69,12 @@ do
 done
 echo "[deployment_files]: $DEPLOYMENT_FILES"
 echo ""
+
+echo "[ingress]: $INGRESS"
+INGRESS_FILES=()
+for i in "${INGRESS[@]}"
+do
+  INGRESS_FILES+=($BASEDIR/deploy/$i.ingress.yml)
+done
+echo "[ingress_files]: $INGRESS_FILES"
+echo ""

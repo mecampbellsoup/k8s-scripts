@@ -18,6 +18,14 @@ do
 done
 echo "Done deleting Secrets"
 
+echo "Deleting Ingress"
+for index in "${!INGRESS_FILES[@]}"
+do
+  INGRESS_FILE=${INGRESS_FILES[$index]}
+  kubectl delete -f $INGRESS_FILE --namespace=$NAMESPACE || true
+done
+echo "Done deleting Ingress"
+
 echo "Deleting Services"
 for index in "${!SERVICE_FILES[@]}"
 do
