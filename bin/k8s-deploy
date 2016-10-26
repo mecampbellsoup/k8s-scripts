@@ -38,7 +38,7 @@ echo "Done deploying Secrets"
 echo "Deploying Services"
 for index in "${!SERVICE_FILES[@]}"
 do
-  SERVICE=${SERVICES[$index]}
+  SERVICE=${SERVICES[$index]##*/}
   SERVICE_FILE=${SERVICE_FILES[$index]}
   kubectl get service ${SERVICE} --namespace=$NAMESPACE &>/dev/null
   if [ $? -ne 0 ]
@@ -114,7 +114,7 @@ echo ""
 echo "Verifying successful deployments"
 for index in "${!DEPLOYMENTS[@]}"
 do
-  DEPLOYMENT=${DEPLOYMENTS[$index]}
+  DEPLOYMENT=${DEPLOYMENTS[$index]##*/}
   echo "Checking deployment for $i"
   timeout.sh -t ${DEPLOY_TIMEOUT} verify-deployment $DEPLOYMENT $NAMESPACE
   result=$?
