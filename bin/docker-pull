@@ -11,4 +11,4 @@ else
 fi
 
 # this should exit 0 even if the image is not there. For example, on a first run
-docker pull ${EXTERNAL_REGISTRY_BASE_DOMAIN}/${REPOSITORY_NAME}:latest | cat
+docker pull ${EXTERNAL_REGISTRY_BASE_DOMAIN}/${REPOSITORY_NAME} || true
