@@ -78,3 +78,12 @@ do
 done
 echo "[ingress_files]: $INGRESS_FILES"
 echo ""
+
+echo "[jobs]: $JOBS"
+JOBS_FILES=()
+for i in "${JOBS[@]}"
+do
+  JOBS_FILES+=($BASEDIR/deploy/$i.job.yml)
+done
+echo "[jobs_files]: $JOBS_FILES"
+echo ""
