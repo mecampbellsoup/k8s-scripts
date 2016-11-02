@@ -12,7 +12,7 @@
     "minikube-apply": "./bin/minikube-apply",
     "k8s-deploy": "./bin/k8s-deploy",
     "k8s-delete": "./bin/k8s-delete",
-    "k8s-run-blocking-job": "./bin/k8s-run-blocking-job"
+    "k8s-run-blocking-job": "./bin/k8s-run-blocking-job",
     "verify-deployment": "./bin/verify-deployment",
     "timeout.sh": "./bin/timeout.sh",
     "k8s-apply": "./bin/k8s-apply",
