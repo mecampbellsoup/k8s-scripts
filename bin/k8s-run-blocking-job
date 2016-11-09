@@ -6,6 +6,7 @@
 # and JOB_NAME should match the job's metadata.name attribute
 # Usage: ./script/run-migrations.sh JOB_NAME
 
+. k8s-read-config
 
 if [ -z "$1" ]
 then
