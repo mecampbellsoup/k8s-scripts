@@ -36,11 +36,18 @@ SECRETS=('example-app')
 # List of files ending in '.service.yml' in the kube directory
 SERVICES=('example-app')
 
-# List of files ending in '.deployment.yml' in the kube directory
-DEPLOYMENTS=('example-app')
+# List of files ending in '.ingress.yml' in the kube directory (Not supported yet)
+IGRESS=()
 
 # List of files ending in '.job.yml' in the kube directory (Not supported yet)
 JOBS=()
+
+# List of files ending in '.blockjob.yml' in the kube directory (Not supported yet)
+BLOCKING_JOBS=()
+
+# List of files ending in '.deployment.yml' in the kube directory
+DEPLOYMENTS=('example-app')
+
 ```
 
 ### Generating a config
